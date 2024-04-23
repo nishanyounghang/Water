@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root
+{
+    --brand:#004DA1;
+    --secondary: #65CEF5;
+    --black: #000;
+    --white: #fff;
+}
+ul
+{
+    list-style-type: none;
+} 
+a
+{
+    text-decoration: none;
+}
+body
+{
+    font-family: 'Laila';
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding: 0px 12px;
+
+}
+
+/****************top*******************/
+.top
+{
+    background: var(--brand);
+    color: var(--white);
+    padding: 15px 0;
+    display:none;
+}
+.top span , .top i
+{
+    color: var(--secondary);
+}
+.flex
+{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.top ul
+{
+    display:flex;
+}
+.hero
+{
+    background: url(../img/img1.jpg);
+    background-size: cover;
+}
+header
+{
+    background: var(--white) ;
+    border-radius: 0 0 20px 20px;
+    position:relative;
+    border-bottom: 10px solid var(--secondary);
+}
+
+.toggle
+{
+    font-size: 22px;
+}
+.py-3
+{
+    padding: 25px 0px;
+}
+nav
+{
+    display:none;
+}
+nav ul
+{
+    display: flex;
+    gap:20px;
+    font-weight: bold;
+}
+nav a
+{
+    color: var(--black);
+}
+.hero-content h1
+{
+    font-size: 24px;
+    color: var(--white);
+}
+.hero-content h1 span
+{
+    color: var(--secondary);
+}
+.btn
+{
+    background: var(--secondary);
+    color: var(--white);
+    padding:10px;
+
+}
+.hero-content img{ width: 100%;}
+.hero-content{ display:flex; flex-wrap: wrap;}
+.hero-left
+{
+    order:2;
+    flex-basis: 100%;
+}
+.hero-right
+{
+    order:1;
+    flex-basis: 100%;
+}
+
+.services
+{
+    padding: 20px 0;
+}
+.title
+{
+    text-align: center;
+    max-width:400px;
+    margin: auto;  
+    color:var(--brand);
+}
+.title h5{
+    color:var(--secondary);
+}
+.s-box
+{
+    background: url(../img/service.png) no-repeat;
+    background-size: 100%;
+    min-height: 350px;
+    width: 350px;
+    box-shadow: 0px 2px 3px 4px #ccc;
+    position: relative;
+    margin:auto;
+
+}
+.s-box img{
+    position: absolute;
+    left:95px;
+    top:80px;
+}
+.sbox-content
+{
+    position: absolute;
+    bottom: 20px;
+    padding: 20px;
+}
+@media(min-width: 480px)
+{
+    .top{ display: block;}
+    .toggle{ display: none;}
+    nav{ display: block;}
+    .hero-content h1 { font-size:55px;}
+    .hero-content{ display: flex; flex-wrap: nowrap;}
+    .hero-left
+    {
+        order:1; 
+        width: 50%;    
+    }
+    .hero-right
+    {
+        order:2;
+        width:50%;
+    }
+    .hero
+    {
+        height: 100vh;
+    }
+}
